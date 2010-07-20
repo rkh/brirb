@@ -15,9 +15,6 @@ def sys(cmd)
    end
 end
 
-#puts "-"*80
-#sys 'curl -O http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'
-
 w '*.coffee',       'coffee -c %s'
 w '*.(sass|scss)',  'compass compile --sass-dir . --css-dir . --images-dir . --javascripts-dir .'
 w 'brirb.haml',     'haml --format html5 brirb.haml brirb.html'
