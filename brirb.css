@@ -1,0 +1,17 @@
+/* line 1, brirb.sass */
+body {
+  font-family: monospace;
+}
+/* line 3, brirb.sass */
+body input#input {
+  font-size: 100%;
+  font-family: monospace;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 9, brirb.sass */
+body input#input:focus {
+  border: none;
+  outline: none;
+}
