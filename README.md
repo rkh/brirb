@@ -18,3 +18,7 @@ Now, open `brirb.html`.
 * WebSockets are fun, play with the code!
 * Combine IRB with HTML output/interaction...
 * Output is fully async! Try this (in brirb): `Thread.new { loop { sleep 2; ws.send('foo') } }` (stop it with `_.kill`)
+
+# Want to hack on it?
+
+Feel free! Especially my javascript-fu sucks a lot. It is not very shell like at the moment.
