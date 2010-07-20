@@ -7,16 +7,16 @@ EventMachine.run do
   EventMachine::WebSocket.start(:host => '127.0.0.1', :port => 8080) do |ws|
     @binding = binding
     @line = 1
+    _ = nil
     ws.onopen    { ws.send RUBY_DESCRIPTION }
     ws.onmessage do |msg|
       response = ""
       begin
-        result = nil
         stdout = capture_stdout do
-          result = eval(msg, @binding, '(brirb session)', @line)
+          _ = eval(msg, @binding, '(brirb session)', @line)
         end
         @line += 1
-        response << stdout << "=> #{result.inspect}"
+        response << stdout << "=> #{_.inspect}"
       rescue Exception => e
         response << e.to_s << "\n" << e.backtrace.map { |l| "\t#{l}" }.join("\n")
       end  
