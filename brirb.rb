@@ -17,7 +17,7 @@ EventMachine.run do
         end
         @line += 1
         response << stdout << "=> #{result.inspect}"
-      rescue => e
+      rescue Exception => e
         response << e.to_s << "\n" << e.backtrace.map { |l| "\t#{l}" }.join("\n")
       end  
       ws.send EscapeUtils.escape_html(response).gsub("\n", "<br>").gsub("\t", "    ").gsub(" ", "&nbsp;")
