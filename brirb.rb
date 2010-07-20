@@ -8,7 +8,7 @@ EventMachine.run do
     @binding = binding
     @line = 1
     _ = nil
-    ws.onopen    { ws.send RUBY_DESCRIPTION }
+    ws.onopen { ws.send RUBY_DESCRIPTION }
     ws.onmessage do |msg|
       response = ""
       begin
