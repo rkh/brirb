@@ -1,8 +1,7 @@
 $(document).ready ->
   input: $("#input")
   output: (str) ->
-    if str.length > 0
-      $("#log").append str+"<br>"
+    $("#log").append "$str<br>"
     input.attr {scrollTop: input.attr("scrollHeight") }
 
   ws: new WebSocket("ws://127.0.0.1:8080")
@@ -15,7 +14,7 @@ $(document).ready ->
   $("form").submit ->
     value: input.val()
     ws.send value
-    output "&gt;&gt; "+value
+    output "&gt;&gt; $value"
     input.val ""
     input.focus()
     false
