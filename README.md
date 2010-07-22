@@ -1,5 +1,5 @@
 IRB in your browser, via WebSockets.
-Prove of concept.
+Proof of concept.
 
 # Installation
 
