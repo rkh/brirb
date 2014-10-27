@@ -14,7 +14,7 @@ Now, open `brirb.html`.
 # What's the point?
 
 * Embed this in your Rails/Rack app, so you have a console in the process serving your page
-* Embed this in your ShowOff presentations to really show of
+* Embed this in your ShowOff presentations to really show off
 * WebSockets are fun, play with the code!
 * Combine IRB with HTML output/interaction...
 * Output is fully async! Try this (in brirb): `Thread.new { loop { sleep 2; ws.send('foo') } }` (stop it with `_.kill`)
